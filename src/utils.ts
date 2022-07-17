@@ -21,7 +21,7 @@ export function useHeaderColorIsLight() {
     theme.dark && theme.mode === 'adaptive'
       ? theme.colors.surface
       : theme.colors.primary
-  return Color(background).isLight()
+  return false; // produces wrong results Color(background).isLight()
 }
 
 export function useHeaderTextColor() {
@@ -30,10 +30,9 @@ export function useHeaderTextColor() {
 }
 
 export function useTextColorOnPrimary() {
-  // Produces bad-looking results
-  // const theme = useTheme()
-  // const isDark = !Color(theme.colors.primary).isLight()
-  return '#fff';
+  const theme = useTheme()
+  const isDark = !Color(theme.colors.primary).isLight()
+  return isDark ? '#fff' : '#000';
 }
 
 export function range(start: number, end: number) {
