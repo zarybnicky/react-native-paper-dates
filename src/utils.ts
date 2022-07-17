@@ -16,11 +16,11 @@ export function useHeaderBackgroundColor() {
 }
 
 export function useHeaderColorIsLight() {
-  const theme = useTheme()
-  const background =
-    theme.dark && theme.mode === 'adaptive'
-      ? theme.colors.surface
-      : theme.colors.primary
+  // const theme = useTheme()
+  // const background =
+  //   theme.dark && theme.mode === 'adaptive'
+  //     ? theme.colors.surface
+  //     : theme.colors.primary
   return false; // produces wrong results Color(background).isLight()
 }
 
