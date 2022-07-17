@@ -30,9 +30,10 @@ export function useHeaderTextColor() {
 }
 
 export function useTextColorOnPrimary() {
-  const theme = useTheme()
-  const isDark = !Color(theme.colors.primary).isLight()
-  return isDark ? '#fff' : '#000'
+  // Produces bad-looking results
+  // const theme = useTheme()
+  // const isDark = !Color(theme.colors.primary).isLight()
+  return '#fff';
 }
 
 export function range(start: number, end: number) {
